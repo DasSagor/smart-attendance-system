@@ -34,20 +34,20 @@ A complete frontend application for managing student attendance and predicting a
 
 1. Clone or download the project
 2. Install dependencies:
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 3. Run the development server:
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Project Structure
 
-```
+\`\`\`
 ├── app/
 │   ├── login/              # Login page
 │   ├── student/
@@ -65,7 +65,7 @@ npm run dev
 │   ├── mock-data.ts        # Mock data for testing
 │   └── utils.ts            # Utility functions
 └── app/globals.css         # Global styles and theme
-```
+\`\`\`
 
 ## Mock Login Credentials
 
@@ -111,7 +111,7 @@ The application uses mock authentication. Use any email/password combination:
 ### Theme
 The application uses a dark theme by default. To modify colors, edit `app/globals.css`:
 
-```css
+\`\`\`css
 :root {
   --primary: oklch(0.55 0.15 250); /* Blue primary color */
   --background: oklch(0.99 0 0);   /* Light background */
@@ -123,12 +123,12 @@ The application uses a dark theme by default. To modify colors, edit `app/global
   --background: oklch(0.12 0 0);   /* Dark background */
   /* ... other color tokens */
 }
-```
+\`\`\`
 
 ### Mock Data
 To modify student data or add more students, edit `lib/mock-data.ts`:
 
-```typescript
+\`\`\`typescript
 export const mockStudentsList: Student[] = [
   {
     id: "1",
@@ -141,7 +141,7 @@ export const mockStudentsList: Student[] = [
   },
   // Add more students...
 ]
-```
+\`\`\`
 
 ## API Integration
 
@@ -154,21 +154,21 @@ The application is designed with API integration in mind. To connect to a Flask 
 
 Example API integration:
 
-```typescript
+\`\`\`typescript
 // Instead of importing mock data
 import { mockStudentData } from "@/lib/mock-data"
 
 // Fetch from API
 const response = await fetch('/api/student/dashboard')
 const studentData = await response.json()
-```
+\`\`\`
 
 ## Build for Production
 
-```bash
+\`\`\`bash
 npm run build
 npm start
-```
+\`\`\`
 
 ## License
 
